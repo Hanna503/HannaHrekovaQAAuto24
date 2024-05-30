@@ -16,18 +16,18 @@ class User:
         self.name = ""
         self.second_name = ""
 
-    @pytest.fixture
-    def user():
-        user = User()
-        user.create()
+@pytest.fixture
+def user():
+    user = User()
+    user.create()
 
-        yield user
+    yield user
 
-        user.remove()
+    user.remove()
 
-    @pytest.fixture
-    def github_api():
-        api = GitHub()
-        yield api
+@pytest.fixture
+def github_api():
+    api = GitHub()
+    yield api
 
         

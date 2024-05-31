@@ -17,14 +17,14 @@ class GitHub:
 
         return body
     
-    def get_emoji(self, emoji):
-        r = requests.get(f'https://api.github.githubassets.com/images/icons/{emoji}')
-        body = r.json()
+    def get_emoji(self, emoji_code):
+        self.base_url = 'https://api.github.com'
+        r = requests.get(f'https://github.githubassets.com/images/icons/emoji/unicode/{emoji_code}')
 
-        return body
+        return r.status_code
     
-    def patch_user(self, name):
-        r = requests.patch(f'https://api.github.com/users/{name}')
+    def get_commit(self, owner, repo, commit_sha):
+        r = requests.get(f'https://api.github.com/repos/{owner}/{repo}/git/commits/{commit_sha}')
         body = r.json()
 
         return body

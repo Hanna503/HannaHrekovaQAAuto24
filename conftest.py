@@ -21,9 +21,7 @@ class User:
 def user():
     user = User()
     user.create()
-
     yield user
-
     user.remove()
 
 @pytest.fixture

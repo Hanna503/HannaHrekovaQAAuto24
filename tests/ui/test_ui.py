@@ -31,7 +31,6 @@ def test_check_incorrect_username():
 
     driver.close()
 
-#individual task below
 
 @pytest.mark.ui
 def test_add_to_basket():

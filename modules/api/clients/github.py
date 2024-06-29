@@ -17,7 +17,7 @@ class GitHub:
 
         return body
     
-    def get_emoji(self, emoji_code):
+    def get_emoji_status_code(self, emoji_code):
         self.base_url = 'https://api.github.com'
         r = requests.get(f'https://github.githubassets.com/images/icons/emoji/unicode/{emoji_code}')
 

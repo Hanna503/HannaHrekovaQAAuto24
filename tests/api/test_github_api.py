@@ -34,13 +34,13 @@ def test_repo_with_single_char_be_found(github_api):
 
 @pytest.mark.api
 def test_emoji_exists(github_api):
-    status_code = github_api.get_emoji('1f947.png?v8')
+    status_code = github_api.get_emoji_status_code('1f947.png?v8')
     assert status_code == 200
 
 
 @pytest.mark.api
 def test_emoji_not_exists(github_api):
-    status_code = github_api.get_emoji('11111a.png?v8')
+    status_code = github_api.get_emoji_status_code('11111a.png?v8')
     assert status_code == 404
 
 

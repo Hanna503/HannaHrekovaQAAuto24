@@ -1,5 +1,5 @@
-from modules.ui.page_objects.base_page import BasePage
 from selenium.webdriver.common.by import By
+from modules.ui.page_objects.base_page import BasePage
 
 
 class SignInPage(BasePage):
